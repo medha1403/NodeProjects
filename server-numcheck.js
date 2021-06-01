@@ -11,11 +11,13 @@ app.get('/numcheck/:num1', (req, res) => {
     //console.log(req.query);
     //req.
     var num = req.params.num1;
-    if (num==1)
-        res.send("Passed value is 1");
-    else
-        res.send("Passed value is not 1");
-
+    
+    if (num%2==0){
+        res.send("The number :num is even");
+    }
+    else{
+        res.send("The number :num is odd");
+    }
     //res.send("tagId is set to " + req.params.tagId1 + req.params.tagId2);
   })
 
